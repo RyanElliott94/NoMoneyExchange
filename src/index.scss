@@ -1,0 +1,40 @@
+@use "./variables.scss" as var;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var.$text-primary !important;
+}
+
+.keyword {
+  font-weight: 700;
+}
+
+button {
+  border: none;
+  background-color: var.$main-background;
+  border-radius: 5px;
+  padding: .5rem;
+  color: var.$text-primary;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: gainsboro;
+  cursor: pointer;
+}
+
+.form-group {
+  width: 100%;
+}
+
+input[type="text"], input[type="email"] {
+  border: none;
+  padding: .7rem;
+  width: 50%;
+  border-radius: 1px;
+}

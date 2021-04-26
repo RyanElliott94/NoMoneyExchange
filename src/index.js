@@ -1,6 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+import 'bootstrap/dist/js/bootstrap.js';
+import 'bootstrap/scss/bootstrap.scss';
+import './index.scss';
+import './Components/Main/main-styling.scss';
+// import '@brainhubeu/react-carousel/lib/style.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
