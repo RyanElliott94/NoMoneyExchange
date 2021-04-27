@@ -6,6 +6,8 @@ import 'bootstrap/dist/js/bootstrap.js';
 import 'bootstrap/scss/bootstrap.scss';
 import './index.scss';
 import './Components/Main/main-styling.scss';
+import './Components/Main/main-mobile.scss';
+import './animated-burger.css';
 // import '@brainhubeu/react-carousel/lib/style.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';

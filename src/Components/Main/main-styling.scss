@@ -65,60 +65,108 @@
 
 .home-main {
     .website-features {
-        height: 500px;
         width: 100%;
-        display: flex;
-        flex-direction: var.$flex-col;
-        justify-content: var.$just-center;
-        background-color: var.$theme-colour;
         margin-top: 200px;
         margin-bottom: 120px;
-    }
 
-    .features-title {
-        p {
-            font-size: 2.5rem;
-            text-align: center;
-            margin: 0;
-            font-weight: 600;
+        .features-title {
+            p {
+                font-size: 3rem !important;
+                text-align: center;
+                font-weight: 100;
+            }
+    
+            span {
+                color: var.$theme-colour;
+                font-weight: 700;
+            }
         }
-
-        span {
-            color: var.$theme-colour;
-            font-weight: 700;
-        }
     }
-
-    .home-features {
-        display: var.$flex-display;
-        justify-content: var.$just-around;
-        align-items: var.$align-center;
-        color: white !important;
-
-        .features-item {
-            width: 350px;
-            height: 350px;
-            text-align: center;
+       
+        .feature-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin-top: 150px !important;
+            margin-bottom: 150px;
 
             .feature-type {
+                width: 400px;
+                height: 400px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: var.$theme-colour;
+                background-color: var.$main-background;
+                box-shadow: var.$theme-shadow-lg;
+
                 p {
                     font-size: 1.5rem;
-                    font-weight: 600;
-                    text-align: center;
-                    margin: 0;
-                    text-decoration: underline;
+                    letter-spacing: 1.5px;
+                }
+
+                svg {
+                    color: var.$theme-colour;
                 }
             }
 
             .feature-info {
                 p {
-                    letter-spacing: 2px;
-                    line-height: 30px;
-                    margin-bottom: 1rem;
+                    font-size: 2rem;
+                    width: 700px;
+                    font-weight: 500;
+                    font-style: italic;
                 }
             }
         }
-    }
+
+        .feature-middle {
+            background-color: var.$theme-colour;
+            padding: 50px;
+            color: white;
+
+            .feature-type {
+                position: relative;
+                top: 100px;
+                margin-top: -100px;
+                box-shadow: none;
+                background-color: white;
+                box-shadow: var.$shadow-lg;
+                border-radius: 3px;
+            }
+        }
+
+    // .home-features {
+    //     display: var.$flex-display;
+    //     justify-content: var.$just-around;
+    //     align-items: var.$align-center;
+    //     color: white !important;
+
+    //     .features-item {
+    //         width: 350px;
+    //         height: 350px;
+    //         text-align: center;
+
+    //         .feature-type {
+    //             p {
+    //                 font-size: 1.5rem;
+    //                 font-weight: 600;
+    //                 text-align: center;
+    //                 margin: 0;
+    //                 text-decoration: underline;
+    //             }
+    //         }
+
+    //         .feature-info {
+    //             p {
+    //                 letter-spacing: 2px;
+    //                 line-height: 30px;
+    //                 margin-bottom: 1rem;
+    //             }
+    //         }
+    //     }
+    // }
 
     .sponsored-clients {
         display: var.$flex-display;
@@ -237,13 +285,14 @@
     background-color: var.$main-background;
     padding: 25px;
     width: 100%;
+    margin-bottom: 60px;
 
     img {
         margin: 25px;
         width: 450px;
         height: 450px;
         object-fit: cover;
-        box-shadow: -25px 20px 0 var.$theme-colour;
+        box-shadow: var.$theme-shadow-lg;
     }
 
     .featured-info {

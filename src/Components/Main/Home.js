@@ -155,8 +155,50 @@ export default function Home() {
                 </div>
                 
                 <div className="website-features">
-                    <div className="home-features">
-                        <p className="display-4 w-25">This still needs to be changed so you can ignore this for now</p>
+                    <div className="features-title">
+                        <p>What are the benefits of NoMoney<span className="logo-span">eXchange</span>?</p>
+                    </div>
+                        <div className="feature-item">
+                        <div className="feature-type">
+                        <BiDevices fontSize="15rem" />
+                            <p>Mobile Friendly</p>
+                        </div>
+
+                        <div className="feature-info">
+                        <p>We are working towards the ultimate mobile user experience</p>
+                        </div>
+                        </div>
+
+
+                        <div className="feature-item feature-middle">
+                        <div className="feature-info">
+                        <p>As new items are added, our views are refreshed. Subscribe to our notifications service</p>
+                        </div>
+
+                        <div className="feature-type">
+                            <MdUpdate fontSize="15rem" />
+                            <p>Constant Updates</p>
+                        </div>
+                        </div>
+
+                        <div className="feature-item mt-5">
+                        <div className="feature-type">
+                            <BiConversation fontSize="15rem" />
+                            <p>Mobile Friendly</p>
+                        </div>
+
+                        <div className="feature-info">
+                        <p>Maintain one-to-one privacy when engaged in a conversation with multiple people</p>
+                        </div>
+                        </div>
+                </div>
+            </div>
+            <Footer />
+        </div>
+    )
+}
+
+{/* <div className="home-features">
                     <div className="features-item">
                         <div className="feature-type">
                             <BiDevices fontSize="11rem" />
@@ -187,10 +229,4 @@ export default function Home() {
                         <p>Maintain one-to-one privacy when engaged in a conversation with multiple people</p>
                         </div>
                     </div>
-                    </div>
-                </div>
-            </div>
-            <Footer />
-        </div>
-    )
-}
+                    </div> */}

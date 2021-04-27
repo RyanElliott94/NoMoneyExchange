@@ -1,0 +1,153 @@
+@use "../../variables.scss" as var;
+
+// NAVBAR 
+@media only screen and (min-width: 320px) and (max-width: 1020px) {
+    .navbar-custom {
+        .navbar-logo {
+            p {
+                font-size: 1rem;
+            }
+        }
+        .navbar-links {
+            position: absolute;
+            top: 45px;
+            left: 0;
+            z-index: 1100;
+            width: 100%;
+            background-color: var.$theme-colour;
+    
+            ul {
+                height: fit-content;
+                flex-direction: column !important;
+
+                li {
+                    width: 100%;
+                    padding: 10px;
+                    text-align: center;
+
+                    a {
+                        color: var.$text-secondary !important;
+                        font-weight: 500;
+                    }
+
+                    .mobile-user-options {
+                        display: flex;
+                        width: 100%;
+                        align-items: center;
+                        justify-content: space-evenly;
+
+                        button {
+                            width: inherit;
+                            margin: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// HOME SLIDERS 
+@media only screen and (min-width: 320px) and (max-width: 1020px) {
+    .featured-service {
+        flex-direction: column;
+
+        .slide-thumb {
+            img {
+                width: 250px;
+                height: 250px;
+                margin: 40px;
+                box-shadow: var.$theme-shadow-mobile;
+            }
+        }
+
+        .featured-info {
+            width: 100%;
+
+            .service-title {
+                p {
+                    font-size: 1.2rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+// HOME PAGE 
+@media only screen and (min-width: 320px) and (max-width: 1020px) {
+    .home-main {
+        .sponsored-clients-main {
+            flex-direction: column;
+
+            .tab-content {
+                overflow: auto;
+            }
+
+            .tab-content-card {
+                overflow: unset !important;
+                margin: 0 !important;
+            }
+        }
+
+        .website-features {
+            .features-title {
+                p {
+                    font-size: 2rem !important;
+                }
+            }
+
+            .feature-item {
+                flex-direction: column;
+
+                .feature-type {
+                    width: 300px;
+                    height: 300px;
+                }
+
+                .feature-info {
+                    position: relative;
+                    top: 50px;
+                    text-align: center;
+
+                    p {
+                        width: auto;
+                        padding: 20px;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+
+            .feature-middle {
+                .feature-info {
+                    top: 0;
+
+                    p {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// FOOTER 
+@media only screen and (min-width: 320px) and (max-width: 1020px) {
+    .footer-signup {
+        p {
+            font-size: 2rem !important;
+            text-align: center;
+        }
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        .footer-links-bottom {
+            li {
+                margin-left: 5px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
