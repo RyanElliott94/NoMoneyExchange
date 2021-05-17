@@ -9,10 +9,14 @@ import Royal from "../../Assets/Images/TempImages/Sponsors/royal-mail.png";
 import IT from "../../Assets/Images/TempImages/Sponsors/rj2.png";
 import Commerce from "../../Assets/Images/TempImages/Sponsors/e-commo.png";
 import Market from "../../Assets/Images/TempImages/Sponsors/market.png";
+import Aos from "aos";
+import CustomModal from "../Extras/CustomModal";
 const $ = require("jquery");
 
 export default function Home() {
     const [selectedQuote, setSelectedQuote] = useState("classified ads not working? ... this will");
+    const [showQuickRegister, setShowQuickRegister] = useState(false);
+    const [showNotification, setShowNotification] = useState(false);
 
     const banner = [
         "you may not need money to get what you want",
@@ -37,6 +41,11 @@ export default function Home() {
     const [tabContent, setTabContent] = useState(sponsors.length ? sponsors : []);
 
     useEffect(() => {
+        Aos.init({
+            delay: 50,
+            duration: 500
+        });
+
         setInterval(() => {
             for(var i = 0; i < banner.length; i++) {
               setSelectedQuote(banner[Math.round(Math.random() * i)]);
@@ -107,12 +116,41 @@ export default function Home() {
 
     return (
         <div className="home-page">
+            <CustomModal showModal={showNotification} closeModal={() => setShowNotification(false)} />
             <div className="home-page-top">
             <Navbar />
             <div className="home-banner">
                 <p>{selectedQuote}</p>
             </div>
+            <div className="home-slide-main">
+                {showQuickRegister ? <div className="quick-signup">
+                    <div className="close-quick-signup">
+                        <button onClick={() => setShowQuickRegister(false)}>Close</button>
+                    </div>
+
+                    <div className="quick-title">
+                        <p>Quick Registration</p>
+                    </div>
+                    <div className="quick-content">
+                        <div className="form-group">
+                            <label htmlFor="email">Email</label>
+                            <input type="text" placeholder="Enter your email address..."></input>
+                        </div>
+
+                        <div className="form-group">
+                            <label htmlFor="password">Password</label>
+                            <input type="password" placeholder="Enter a unique password..."></input>
+                        </div>
+
+                        <div className="form-group">
+                            <button className="signup-btn">Register</button>
+                        </div>
+                    </div>
+                </div> : <div className="quick-signup-short" onClick={() => showQuickRegister ? setShowQuickRegister(false) : setShowQuickRegister(true)}>
+                        <p>Quick registration</p>
+                        </div>}
             <HomeSlides />
+            </div>
             </div>
 
             <div className="home-main">
@@ -158,7 +196,7 @@ export default function Home() {
                     <div className="features-title">
                         <p>What are the benefits of NoMoney<span className="logo-span">eXchange</span>?</p>
                     </div>
-                        <div className="feature-item">
+                        <div className="feature-item" data-aos="slide-left">
                         <div className="feature-type">
                         <BiDevices fontSize="15rem" />
                             <p>Mobile Friendly</p>
@@ -170,7 +208,7 @@ export default function Home() {
                         </div>
 
 
-                        <div className="feature-item feature-middle">
+                        <div className="feature-item feature-middle" data-aos="slide-right">
                         <div className="feature-info">
                         <p>As new items are added, our views are refreshed. Subscribe to our notifications service</p>
                         </div>
@@ -181,7 +219,7 @@ export default function Home() {
                         </div>
                         </div>
 
-                        <div className="feature-item mt-5">
+                        <div className="feature-item mt-5" data-aos="slide-left">
                         <div className="feature-type">
                             <BiConversation fontSize="15rem" />
                             <p>Mobile Friendly</p>

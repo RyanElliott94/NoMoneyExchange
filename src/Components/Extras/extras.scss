@@ -1,0 +1,66 @@
+@use "../../variables.scss" as var;
+
+.custom-modal-main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 1120;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(15px);
+    background-color: rgba(142, 142, 161, 0.144);
+
+    .custom-modal-inner {
+        width: 400px;
+        height: 200px;
+        background-color: var.$main-background;
+        border-radius: 10px;
+        box-shadow: var.$shadow-xl;
+        padding: 25px;
+
+        svg {
+            color: var.$theme-colour;
+            float: right;
+            position: relative;
+            bottom: 20px;
+            left: 15px;
+            margin-bottom: -20px;
+            margin-left: -15px;
+            cursor: pointer;
+
+            :hover, path:hover {
+                color: gainsboro !important;
+            }
+        }
+
+        .custom-modal-title {
+            border-bottom: 1px solid gainsboro;
+
+            p {
+                margin: 0;
+                font-size: 2rem;
+                font-weight: 600;
+                letter-spacing: 1.5px;
+            }
+        }
+
+        .custom-modal-content {
+            height: 100px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                font-size: 1.3rem;
+                font-weight: 400;
+                text-align: center;
+                margin: 0;
+            }
+        }
+    }
+}

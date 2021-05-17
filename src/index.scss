@@ -7,6 +7,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var.$text-primary !important;
+  background-color: var.$body-background !important;
 }
 
 .keyword {
@@ -32,7 +33,7 @@ button:hover {
   width: 100%;
 }
 
-input[type="text"], input[type="email"] {
+input[type="text"], input[type="email"], input[type="password"] {
   border: none;
   padding: .7rem;
   width: 50%;

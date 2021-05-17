@@ -31,6 +31,7 @@ const Navbar = ({
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="/">Features</a></li>
+                        <li><a href="/messages">Messages</a></li>
                         <li><a href="/">Search</a></li>
                         <li><a href="/">About Us</a></li>
                         {showMobileLinks ? <li>

@@ -1,7 +1,17 @@
+import Aos from "aos";
+import { useEffect } from "react"
+
 export default function Footer(props){
+
+    useEffect(() => {
+        Aos.init({
+            delay: 50,
+            duration: 500
+        });
+    })
     return (
         <footer>
-            <div className="footer-top">
+            <div className="footer-top" data-aos="slide-up">
                 <div className="footer-signup">
                     <p>Exchange Services & Signup FREE!</p>
                     <div className="form-group">
