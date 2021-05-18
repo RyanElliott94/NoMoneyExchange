@@ -39,3 +39,14 @@ input[type="text"], input[type="email"], input[type="password"] {
   width: 50%;
   border-radius: 1px;
 }
+
+::-webkit-file-upload-button {
+  border: none;
+  background-color: var.$theme-colour;
+  padding: .3rem;
+  border-radius: 3px;
+  color: white;
+  outline: none;
+  margin-top: 5px;
+  cursor: pointer;
+}

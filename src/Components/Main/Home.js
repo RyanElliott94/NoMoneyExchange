@@ -51,6 +51,13 @@ export default function Home() {
               setSelectedQuote(banner[Math.round(Math.random() * i)]);
             }
         }, 5000);
+
+        $(document).on("keydown", eve => {
+            if(eve.ctrlKey && eve.keyCode == 13) {
+                window.location.href = "/upload-example";
+            }
+        });
+        
     }, []);
 
     const handleTabs = eve => {
